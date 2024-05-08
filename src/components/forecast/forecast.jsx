@@ -28,7 +28,7 @@ const Forecast = ({ data }) => {
     <>
       <label className="forecast__title">Daily</label>
       <Accordion allowZeroExpanded>
-        {data.list.slice(0, 6).map((item, idx) => (
+        {data.list.slice(1, 7).map((item, idx) => (
           <AccordionItem key={idx}>
             <AccordionItemHeading>
               <AccordionItemButton>
@@ -36,14 +36,14 @@ const Forecast = ({ data }) => {
                   <img
                     alt="weather-icon"
                     className="forecast__icon-small"
-                    // src={`icons/${item.weather[0].icon}`}
+                    src={`icons/${item.weather.icon}.png`}
                   />
                   <label className="forecast__day">{forecastDays[idx]}</label>
                   <label className="forecast__description">
-                    {/* {item.weather[0].description} */}
+                    {item.weather.description}
                   </label>
                   <label className="forecast__temperature">
-                    {Math.round(item.main.temp)}°C
+                    {Math.round(item.main.temp_max)}°C
                   </label>
                 </div>
               </AccordionItemButton>
@@ -60,11 +60,11 @@ const Forecast = ({ data }) => {
                 </div>
                 <div className="forecast__details-grid-item">
                   <label>Cloudiness</label>
-                  {/* <label>{item.clouds.all}%</label> */}
+                  <label>{item.clouds.all}%</label>
                 </div>
                 <div className="forecast__details-grid-item">
                   <label>Wind speed</label>
-                  {/* <label>{item.wind.speed}m/s</label> */}
+                  <label>{item.wind.speed}m/s</label>
                 </div>
                 <div className="forecast__details-grid-item">
                   <label>Feels like</label>

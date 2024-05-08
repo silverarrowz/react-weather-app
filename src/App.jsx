@@ -38,6 +38,9 @@ function App() {
           if (!dailyForecasts[date]) {
             dailyForecasts[date] = {
               main: { ...forecast.main },
+              weather: { ...forecast.weather[0] },
+              clouds: { ...forecast.clouds },
+              wind: { ...forecast.wind },
             };
           } else {
             dailyForecasts[date].main.temp_min = Math.min(
