@@ -1,0 +1,60 @@
+.forecast__title {
+  font-size: 1.4375rem;
+  font-weight: 700;
+}
+
+.forecast__daily-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 40px;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  padding: 5px 20px;
+  background-color: #fff;
+}
+
+.forecast__icon-small {
+  width: 40px;
+}
+
+.forecast__day {
+  flex: 1 1;
+  margin-left: 15px;
+  font-weight: 600;
+  color: #4d4150;
+}
+
+.forecast__description {
+  flex: 1 1;
+  margin-right: 15px;
+  text-align: right;
+}
+
+.forecast__temperature {
+  color: #508aac;
+}
+
+.forecast__details-grid {
+  grid-row-gap: 0;
+  grid-column-gap: 55px;
+  display: grid;
+  flex: 1 1;
+  grid-template-columns: auto auto;
+  padding: 5px 15px;
+}
+
+.forecast__details-grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.forecast__details-grid-item label:first-child {
+  color: #508aac;
+}
+
+.forecast__details-grid-item label:last-child {
+}
